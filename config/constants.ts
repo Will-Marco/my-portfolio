@@ -1,6 +1,6 @@
-import { navItemsType } from "@/types";
+import { ContactsType, NavItemsType } from "@/types";
 
-export const navItems: navItemsType[] = [
+export const navItems: NavItemsType[] = [
   {
     route: "/",
     label: "About",
@@ -25,5 +25,28 @@ export const navItems: navItemsType[] = [
     route: "/cv",
     label: "CV",
     icon: "cv",
+  },
+];
+
+export const contacts: ContactsType[] = [
+  {
+    route: "https://www.linkedin.com/in/firdavs-abdiazizov",
+    label: "LinkedIn",
+    icon: "linkedin",
+  },
+  {
+    route: "https://instagram.com/firdavs_abdiazizov",
+    label: "Instagram",
+    icon: "instagram",
+  },
+  {
+    route: "mailto:mr.marco0101@gmail.com",
+    label: "Gmail",
+    icon: "gmail",
+  },
+  {
+    route: "https://t.me/will_marco",
+    label: "Telegram",
+    icon: "telegram",
   },
 ];
