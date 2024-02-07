@@ -34,7 +34,9 @@ export default function Navbar(): ReactNode {
             </Button>
           </DrawerClose>
         </DrawerHeader>
-        <NavbarItems />
+        <DrawerClose>
+          <NavbarItems />
+        </DrawerClose>
         <DrawerFooter>
           <p className="text-sm">
             Copyright © 2024 All rights reserved
