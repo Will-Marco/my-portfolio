@@ -5,26 +5,15 @@ import {
   Drawer,
   DrawerClose,
   DrawerContent,
-  DrawerDescription,
   DrawerFooter,
   DrawerHeader,
   DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { navItems } from "@/config/constants";
-import {
-  Barcode,
-  Brain,
-  Library,
-  Lightbulb,
-  Menu,
-  Phone,
-  SidebarClose,
-  StickyNote,
-  X,
-} from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Link from "next/link";
-import { ReactNode, useState } from "react";
+import { ReactNode } from "react";
+import NavbarItems from "./Navbar-items";
 
 export default function Navbar(): ReactNode {
   const drawer = (
@@ -45,25 +34,7 @@ export default function Navbar(): ReactNode {
             </Button>
           </DrawerClose>
         </DrawerHeader>
-        <ul className="flex flex-col gap-4">
-          {navItems.map((nav) => (
-            <li key={nav.label}>
-              <Link href={nav.route}>
-                <Button
-                  variant="ghost"
-                  className="w-full flex justify-start gap-4 text-sm border-b-2"
-                >
-                  {nav.icon == "info" && <Library />}
-                  {nav.icon == "projects" && <Lightbulb />}
-                  {nav.icon == "skills" && <Brain />}
-                  {nav.icon == "contact" && <Phone />}
-                  {nav.icon == "cv" && <StickyNote />}
-                  <span>{nav.label}</span>
-                </Button>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <NavbarItems />
         <DrawerFooter>
           <p className="text-sm">
             Copyright © 2024 All rights reserved
@@ -85,27 +56,7 @@ export default function Navbar(): ReactNode {
               Marco<span className="text-gray-500">.dev</span>
             </h1>
           </Link>
-          <ul className="flex flex-col gap-4">
-            {navItems.map((nav) => (
-              <li key={nav.label}>
-                <Link href={nav.route}>
-                  <Button
-                    variant="ghost"
-                    className="w-full flex justify-start gap-4 text-sm lg:text-xl border-b-2"
-                  >
-                    <div>
-                      {nav.icon == "info" && <Library />}
-                      {nav.icon == "projects" && <Lightbulb />}
-                      {nav.icon == "skills" && <Brain />}
-                      {nav.icon == "contact" && <Phone />}
-                      {nav.icon == "cv" && <StickyNote />}
-                    </div>
-                    <span>{nav.label}</span>
-                  </Button>
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <NavbarItems />
         </div>
         <p className="text-sm md:text-sm lg:text-base">
           Copyright © 2024 All rights reserved
