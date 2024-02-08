@@ -1,4 +1,4 @@
-import { CardsType, ContactsType, NavItemsType } from "@/types";
+import { CardsType, ContactsType, NavItemsType, SkillsType } from "@/types";
 
 export const navItems: NavItemsType[] = [
   {
@@ -145,3 +145,26 @@ export const cards: CardsType[] = [
     techStack: ["React Native", "expo", "nativewind", "tmdb api"],
   },
 ];
+
+export const skills: SkillsType = {
+  language: ["JavaScript", "TypeScript"],
+  frontend: [
+    "HTML5",
+    "CSS3",
+    "Sass",
+    "React JS",
+    "Redux",
+    "Redux-toolkit",
+    "Next JS",
+    "NextAuth",
+    "Bootstrap",
+    "MUI",
+    "Tailwind",
+    "Headlessui",
+    "Shadcn/UI",
+    "Framer-motion",
+  ],
+  backend: ["Node.js", "Express", "MongoDB", "Mongoose"],
+  mobile: ["React Native", "Expo", "Nativewind"],
+  others: ["Ubuntu", "Git", "NPM", "Yarn", "Postman", "Hygraph CMS"],
+};

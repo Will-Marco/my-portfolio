@@ -15,3 +15,7 @@ export interface CardsType {
   github: string;
   techStack: string[];
 }
+
+export interface SkillsType {
+  [key: string]: string[];
+}
