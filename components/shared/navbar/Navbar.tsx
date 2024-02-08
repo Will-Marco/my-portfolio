@@ -18,7 +18,7 @@ import NavbarItems from "./Navbar-items";
 export default function Navbar(): ReactNode {
   const drawer = (
     <Drawer>
-      <DrawerTrigger>
+      <DrawerTrigger className="absolute z-10">
         <Menu />
       </DrawerTrigger>
       <DrawerContent className="h-screen p-4 flex flex-col justify-between text-center ">
@@ -44,12 +44,13 @@ export default function Navbar(): ReactNode {
             Created by Marco.dev
           </p>
         </DrawerFooter>
+        <div className="w-1/2 h-full absolute -bottom-1/4 left-1/4 -z-10 blue__gradient" />
       </DrawerContent>
     </Drawer>
   );
 
   return (
-    <header className="w-auto sm:w-[25%] h-screen p-4 sm:relative absolute overflow-hidden text-center sm:border-r-2 border-gray-600">
+    <header className="w-auto sm:w-[20%] h-screen p-4 sm:fixed absolute overflow-hidden text-center sm:border-r-2 border-gray-600">
       <div className="sm:hidden">{drawer}</div>
       <nav className="h-full hidden sm:flex flex-col justify-between">
         <div>
