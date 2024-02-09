@@ -1,10 +1,16 @@
+import { ReactNode } from "react";
+
+export interface IconType {
+  [key: string]: ReactNode;
+}
+
 export interface NavItemsType {
   route: string;
   label: string;
   icon: string;
 }
 
-export interface ContactsType extends NavItemsType {}
+export interface SocialMediasType extends NavItemsType {}
 
 export interface CardsType {
   link?: string;
@@ -18,4 +24,19 @@ export interface CardsType {
 
 export interface SkillsType {
   [key: string]: string[];
+}
+
+export interface ContactsType {
+  type: string;
+  icon: string;
+  label: string;
+  link: string;
+}
+
+export interface FormType {
+  name: string;
+  contactInformation: string;
+  subject: string;
+  message: string;
+  success: boolean;
 }

@@ -1,4 +1,10 @@
-import { CardsType, ContactsType, NavItemsType, SkillsType } from "@/types";
+import {
+  CardsType,
+  SocialMediasType,
+  NavItemsType,
+  SkillsType,
+  ContactsType,
+} from "@/types";
 
 export const navItems: NavItemsType[] = [
   {
@@ -22,13 +28,13 @@ export const navItems: NavItemsType[] = [
     icon: "contact",
   },
   {
-    route: "/cv",
+    route: "/files/FirdavsAbdiazizovResume.pdf",
     label: "CV",
     icon: "cv",
   },
 ];
 
-export const contacts: ContactsType[] = [
+export const socialMedias: SocialMediasType[] = [
   {
     route: "https://www.linkedin.com/in/firdavs-abdiazizov",
     label: "LinkedIn",
@@ -38,16 +44,6 @@ export const contacts: ContactsType[] = [
     route: "https://instagram.com/firdavs_abdiazizov",
     label: "Instagram",
     icon: "instagram",
-  },
-  {
-    route: "mailto:mr.marco0101@gmail.com",
-    label: "Gmail",
-    icon: "gmail",
-  },
-  {
-    route: "https://t.me/will_marco",
-    label: "Telegram",
-    icon: "telegram",
   },
 ];
 
@@ -168,3 +164,30 @@ export const skills: SkillsType = {
   mobile: ["React Native", "Expo", "Nativewind"],
   others: ["Ubuntu", "Git", "NPM", "Yarn", "Postman", "Hygraph CMS"],
 };
+
+export const contactData: ContactsType[] = [
+  {
+    type: "address",
+    icon: "map",
+    label: "Tashkent Uzbekistan",
+    link: "https://maps.app.goo.gl/a5bY51xDL8iECoVg8",
+  },
+  {
+    type: "phone",
+    icon: "phone",
+    label: "+998996584432",
+    link: "tel:+998996584432",
+  },
+  {
+    type: "E-mail",
+    icon: "mail",
+    label: "mr.marco0101@gmail.com",
+    link: "mailto:mr.marco0101@gmail.com",
+  },
+  {
+    type: "telegram",
+    icon: "send",
+    label: "Telegram contact",
+    link: "https://t.me/will_marco",
+  },
+];
