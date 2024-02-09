@@ -18,7 +18,7 @@ import NavbarItems from "./Navbar-items";
 export default function Navbar(): ReactNode {
   const drawer = (
     <Drawer>
-      <DrawerTrigger className="absolute z-10">
+      <DrawerTrigger className="z-10">
         <Menu />
       </DrawerTrigger>
       <DrawerContent className="h-screen p-4 flex flex-col justify-between text-center ">

@@ -13,8 +13,9 @@ export default function Projects() {
   };
 
   return (
-    <div className="w-screen h-fit sm:ml-[20%] p-10 relative bg-gray-950">
+    <div className="w-screen h-fit sm:ml-[20%] p-10 relative bg-gray-950 -z-10">
       <div className="flex flex-col justify-center items-center">
+      <h1 className="mb-6 text-center text-4xl font-semibold">Projects</h1>
         <div className="m-auto grid md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-6">
           {cards.map((card: CardsType, idx: number) => (
             <motion.div

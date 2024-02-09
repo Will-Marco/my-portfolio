@@ -21,6 +21,10 @@ export default function NavbarItems() {
   const [active, setActive] = useState("About");
 
   const handleButtonClick = (route: string, label: string) => {
+    if (label == "CV") {
+      window.open(route, "_blank");
+      return;
+    }
     router.push(route);
     setActive(label);
   };

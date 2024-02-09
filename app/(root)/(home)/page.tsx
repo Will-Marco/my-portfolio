@@ -1,16 +1,12 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { contacts } from "@/config/constants";
+import { socialMedias } from "@/config/constants";
 import { Github, Instagram, Linkedin, Mail, Send } from "lucide-react";
 import Link from "next/link";
-import { ReactNode } from "react";
 import { motion } from "framer-motion";
 import CustomImage from "@/components/Custom-image";
-
-interface IconType {
-  [key: string]: ReactNode;
-}
+import { IconType } from "@/types";
 
 const iconMap: IconType = {
   github: <Github />,
@@ -22,7 +18,7 @@ const iconMap: IconType = {
 
 export default function Home() {
   return (
-    <div className="w-screen h-screen ml-[20%] flex flex-col justify-center items-center bg-gray-950">
+    <div className="w-screen h-screen sm:ml-[20%] flex flex-col justify-center items-center bg-gray-950">
       <CustomImage
         image="/person.webp"
         alt="person"
@@ -65,8 +61,8 @@ export default function Home() {
           </Link>
         </motion.p>
       </div>
-      <ul className="mt-4 md:mt-12 grid grid-cols-2 lg:flex items-center gap-4">
-        {contacts.map((contact, idx) => (
+      <ul className="mt-4 md:mt-12 grid md:grid-cols-2 lg:flex items-center gap-4">
+        {socialMedias.map((sm, idx) => (
           <motion.div
             key={idx}
             initial={{ opacity: 0, x: 100 }}
@@ -80,14 +76,14 @@ export default function Home() {
               transition={{ duration: 0.3 }}
             >
               <li>
-                <Link href={contact.route}>
+                <Link href={sm.route}>
                   <Button
                     variant="ghost"
                     className="w-full flex justify-center gap-4 text-sm lg:text-lg border-b-2"
                   >
-                    <div>{iconMap[contact.icon]}</div>
-                    <span className="hidden md:inline-block">
-                      {contact.label}
+                    <div>{iconMap[sm.icon]}</div>
+                    <span className="">
+                      {sm.label}
                     </span>
                   </Button>
                 </Link>
