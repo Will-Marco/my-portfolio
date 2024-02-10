@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="w-screen h-screen sm:ml-[20%] flex flex-col justify-center items-center bg-gray-950">
       <CustomImage
-        image="/person.webp"
+        image="/images/person.webp"
         alt="person"
         width={200}
         height={0}
@@ -82,9 +82,7 @@ export default function Home() {
                     className="w-full flex justify-center gap-4 text-sm lg:text-lg border-b-2"
                   >
                     <div>{iconMap[sm.icon]}</div>
-                    <span className="">
-                      {sm.label}
-                    </span>
+                    <span className="">{sm.label}</span>
                   </Button>
                 </Link>
               </li>
