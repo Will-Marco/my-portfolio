@@ -72,12 +72,12 @@ export default function Contact() {
   }
 
   return (
-    <div className="w-screen h-screen sm:ml-[20%] p-6 pt-12 sm:p-10 sm:px-20 md:px-28 relative bg-gray-950 -z-10">
+    <div className="w-screen h-screen sm:ml-[20%] p-6 pt-9 sm:p-10 sm:px-20 md:px-28 relative bg-gray-950">
       <motion.h1
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
-        className="mb-6 text-4xl font-semibold"
+        className="mb-6 ml-10 text-2xl sm:text-4xl font-semibold"
       >
         Contact Informations
       </motion.h1>

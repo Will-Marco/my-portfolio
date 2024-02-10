@@ -18,7 +18,7 @@ import NavbarItems from "./Navbar-items";
 export default function Navbar(): ReactNode {
   const drawer = (
     <Drawer>
-      <DrawerTrigger className="z-10">
+      <DrawerTrigger className="absolute top-0 left-0  z-10">
         <Menu />
       </DrawerTrigger>
       <DrawerContent className="h-screen p-4 flex flex-col justify-between text-center ">
@@ -50,7 +50,7 @@ export default function Navbar(): ReactNode {
   );
 
   return (
-    <header className="w-auto sm:w-[20%] h-screen p-4 sm:fixed absolute overflow-hidden text-center sm:border-r-2 border-gray-600">
+    <header className="w-auto sm:w-[20%] h-screen p-4 sm:fixed absolute top-10 left-5 overflow-hidden text-center sm:border-r-2 border-gray-600">
       <div className="sm:hidden">{drawer}</div>
       <nav className="h-full hidden sm:flex flex-col justify-between">
         <div>

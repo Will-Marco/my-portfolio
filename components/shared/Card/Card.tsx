@@ -44,7 +44,7 @@ export default function CardItem({ card }: { card: CardsType }) {
           Github
         </Button>
       </CardContent>
-      <CardFooter className="h-fit felx flex-wrap gap-2">
+      <CardFooter className="h-28 felx flex-wrap content-center gap-2">
         {card.techStack.map((tech: string) => (
           <p
             key={tech}
