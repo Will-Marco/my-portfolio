@@ -4,6 +4,7 @@ import { ThemeProvider } from "@/providers/theme-provider";
 import "./globals.css";
 import Navbar from "@/components/shared/navbar/Navbar";
 import { Toaster } from "@/components/ui/toaster";
+import NProgressProvider from "@/providers/nprogress-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,11 +23,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark">
-          <div className="flex flex-row relative">
-            <Navbar />
-            {children}
-            <Toaster />
-          </div>
+          <NProgressProvider>
+            <div className="flex flex-row relative">
+              <Navbar />
+              {children}
+              <Toaster />
+            </div>
+          </NProgressProvider>
         </ThemeProvider>
       </body>
     </html>

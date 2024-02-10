@@ -79,3 +79,7 @@
   background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214df6 100%);
   filter: blur(123px);
 }
+
+#nprogress .bar {
+	z-index: 1110 !important;
+}

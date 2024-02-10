@@ -56,7 +56,7 @@ export default function Home() {
             Javascript, TypeScript, Next.JS, Node.JS, React-Native(Expo)
           </span>{" "}
           and ect. If you have any questions or offers feel free to{" "}
-          <Link className="text-red-600 cursor-pointer" href="/contect">
+          <Link className="text-red-600 cursor-pointer" href="/contact">
             contact me
           </Link>
         </motion.p>

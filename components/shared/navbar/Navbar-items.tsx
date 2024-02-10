@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { navItems } from "@/config/constants";
 import { Brain, Library, Lightbulb, Phone, StickyNote } from "lucide-react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { ReactNode, useState } from "react";
 
 interface IconType {
@@ -17,7 +17,6 @@ const iconMap: IconType = {
 };
 
 export default function NavbarItems() {
-  const router = useRouter();
   const [active, setActive] = useState("About");
 
   const handleButtonClick = (route: string, label: string) => {
@@ -25,7 +24,6 @@ export default function NavbarItems() {
       window.open(route, "_blank");
       return;
     }
-    router.push(route);
     setActive(label);
   };
 
@@ -33,6 +31,7 @@ export default function NavbarItems() {
     <ul className="flex flex-col gap-4">
       {navItems.map((nav) => (
         <li key={nav.label}>
+          <Link href={nav.route}>
           <Button
             variant="ghost"
             className={`w-full flex justify-start gap-4 text-sm lg:text-xl text-slate-500 border-b-2 ${
@@ -43,6 +42,7 @@ export default function NavbarItems() {
             <div>{iconMap[nav.icon]}</div>
             <span>{nav.label}</span>
           </Button>
+          </Link>
         </li>
       ))}
     </ul>
