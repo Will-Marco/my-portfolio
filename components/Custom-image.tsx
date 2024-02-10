@@ -36,7 +36,6 @@ export default function CustomImage({
       width={width}
       height={height}
       priority
-      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
       onLoad={() => setIsLoading(false)}
       style={{ fill: "white" }}
       onClick={onClick}
