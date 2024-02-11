@@ -22,6 +22,7 @@ export default function NavbarItems() {
   const handleButtonClick = (route: string, label: string) => {
     if (label == "CV") {
       window.open(route, "_blank");
+      window.location.href = "/";
       return;
     }
     setActive(route);

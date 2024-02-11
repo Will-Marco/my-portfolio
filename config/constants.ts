@@ -132,10 +132,10 @@ export const cards: CardsType[] = [
     ],
   },
   {
-    link: "https://edu-platform-will-marco.vercel.app/",
+    link: "https://expo.dev//accounts/will-marco/projects/movie/builds/d1d38a97-7e18-4153-95c9-6ed1e7e86150/",
     imageSrc: "https://www.svgrepo.com/show/530376/movie.svg",
     title: "Movie App",
-    description: "E-store website",
+    description: "A platform crafted to furnish intricate details about films.",
     position: "Mobile developer",
     github: "https://github.com/Will-Marco/boom-shop-market",
     techStack: ["React Native", "expo", "nativewind", "tmdb api"],

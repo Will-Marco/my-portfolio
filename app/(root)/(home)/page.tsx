@@ -7,6 +7,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import CustomImage from "@/components/Custom-image";
 import { IconType } from "@/types";
+import FireSpark from "@/components/FireSparks";
 
 const iconMap: IconType = {
   github: <Github />,
@@ -24,7 +25,7 @@ export default function Home() {
         alt="person"
         width={200}
         height={0}
-        className="rounded-full border-4 border-sky-800"
+        className="rounded-full border-4 border-sky-800 z-10"
       />
       <div className="w-8/12 text-center">
         <motion.p
@@ -90,6 +91,7 @@ export default function Home() {
           </motion.div>
         ))}
       </ul>
+      <FireSpark />
     </div>
   );
 }
