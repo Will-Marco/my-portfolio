@@ -20,6 +20,7 @@ import { Mail, MapPin, Phone, Send } from "lucide-react";
 import { motion } from "framer-motion";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { useState } from "react";
 
 const iconMap: IconType = {
   map: <MapPin />,
@@ -29,6 +30,8 @@ const iconMap: IconType = {
 };
 
 export default function Contact() {
+  const [isLoading, setIsLoading] = useState<boolean>(false);
+
   const handleClick = (url: string) => {
     window.open(url, "_blank");
   };
@@ -45,6 +48,7 @@ export default function Contact() {
 
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
+      setIsLoading(true);
       const { data } = await axios.post<FormType>("/api/contact", {
         ...values,
       });
@@ -68,6 +72,8 @@ export default function Contact() {
         description: error as string,
         variant: "destructive",
       });
+    } finally {
+      setIsLoading(false);
     }
   }
 
@@ -179,7 +185,8 @@ export default function Contact() {
             <Button
               type="submit"
               variant="outline"
-              className="w-1/3 py-6 text-xl"
+              className="w-1/3 py-6 text-xl disabled:cursor-wait"
+              disabled={!isLoading}
             >
               Submit
             </Button>
