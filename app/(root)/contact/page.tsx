@@ -186,7 +186,7 @@ export default function Contact() {
               type="submit"
               variant="outline"
               className="w-1/3 py-6 text-xl disabled:cursor-wait"
-              disabled={!isLoading}
+              disabled={isLoading}
             >
               Submit
             </Button>

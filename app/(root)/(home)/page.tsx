@@ -77,7 +77,7 @@ export default function Home() {
               transition={{ duration: 0.3 }}
             >
               <li>
-                <Link href={sm.route}>
+                <Link href={sm.route} target="_blank">
                   <Button
                     variant="ghost"
                     className="w-full flex justify-center gap-4 text-sm lg:text-lg border-b-2"
