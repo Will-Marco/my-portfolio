@@ -50,7 +50,7 @@ export default function Navbar(): ReactNode {
   );
 
   return (
-    <header className="w-auto sm:w-[20%] h-screen p-4 sm:fixed absolute top-10 left-5 overflow-hidden text-center sm:border-r-2 border-gray-600">
+    <header className="w-auto sm:w-[20%] h-screen p-4 sm:fixed absolute top-10 sm:top-0 left-5 sm:left-0 overflow-hidden text-center sm:border-r-2 border-gray-600">
       <div className="sm:hidden">{drawer}</div>
       <nav className="h-full hidden sm:flex flex-col justify-between">
         <div>

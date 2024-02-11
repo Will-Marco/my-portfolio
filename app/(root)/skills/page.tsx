@@ -10,8 +10,8 @@ export default function Skills() {
   };
 
   return (
-    <div className="w-screen h-screen sm:ml-[20%] p-10 relative bg-gray-950">
-      <h1 className="mt-[6%] text-center text-4xl font-semibold">Languages & Tools</h1>
+    <div className="w-screen h-screen sm:ml-[20%] p-6 pt-9 sm:p-10 sm:px-20 md:px-28 relative bg-gray-950">
+      <h1 className="mb-6 ml-10 text-3xl sm:text-4xl font-semibold">Languages & Tools</h1>
       <div className="h-full px-[8%] py-[10%] sm:pt-[5%] grid md:grid-cols-2 lg:grid-cols-3 gap-10">
         {Object.entries(skills).map(([category, value], idx) => (
           <div key={category} className="uppercase">
