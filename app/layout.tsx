@@ -5,6 +5,7 @@ import "./globals.css";
 import Navbar from "@/components/shared/navbar/Navbar";
 import { Toaster } from "@/components/ui/toaster";
 import NProgressProvider from "@/providers/nprogress-provider";
+import { Suspense } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,9 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark">
           <NProgressProvider>
             <div className="flex flex-row relative">
-              <Navbar />
+              <Suspense>
+                <Navbar />
+              </Suspense>
               {children}
               <Toaster />
             </div>
