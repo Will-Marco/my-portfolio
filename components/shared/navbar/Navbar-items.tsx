@@ -25,6 +25,7 @@ export default function NavbarItems() {
       window.location.href = "/";
       return;
     }
+
     setActive(route);
   };
 
@@ -38,7 +39,20 @@ export default function NavbarItems() {
     <ul className="flex flex-col gap-4">
       {navItems.map((nav) => (
         <li key={nav.label}>
-          <Link href={nav.route}>
+          {nav.label !== "CV" ? (
+            <Link href={nav.route}>
+              <Button
+                variant="ghost"
+                className={`w-full flex justify-start gap-4 text-sm lg:text-xl text-slate-500 border-b-2 ${
+                  active === nav.route ? "text-white" : ""
+                }`}
+                onClick={() => handleButtonClick(nav.route, nav.label)}
+              >
+                <div>{iconMap[nav.icon]}</div>
+                <span>{nav.label}</span>
+              </Button>
+            </Link>
+          ) : (
             <Button
               variant="ghost"
               className={`w-full flex justify-start gap-4 text-sm lg:text-xl text-slate-500 border-b-2 ${
@@ -49,7 +63,7 @@ export default function NavbarItems() {
               <div>{iconMap[nav.icon]}</div>
               <span>{nav.label}</span>
             </Button>
-          </Link>
+          )}
         </li>
       ))}
     </ul>
