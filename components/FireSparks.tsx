@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 
 const FireSpark = () => {
-  const sparks = Array.from({ length: 40 }).map((_, index) => (
+  const sparks = Array.from({ length: 50 }).map((_, index) => (
     <motion.div
       key={index}
       className={cn(
@@ -10,7 +10,7 @@ const FireSpark = () => {
       )}
       style={{
         top: `${Math.floor(Math.random() * 100)}%`,
-        left: `${Math.floor(Math.random() * 80 + 20)}%`,
+        left: `${Math.floor(Math.random() * 100)}%`,
       }}
       animate={{ opacity: [1, 0], y: [-0, -200], rotateZ: [0, 180] }}
       transition={{
@@ -22,7 +22,7 @@ const FireSpark = () => {
     />
   ));
 
-  return <div className="w-screen h-screen absolute -left-10 sm:left-0">{sparks}</div>;
+  return <>{sparks}</>;
 };
 
 export default FireSpark;

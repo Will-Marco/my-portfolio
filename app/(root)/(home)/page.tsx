@@ -19,7 +19,7 @@ const iconMap: IconType = {
 
 export default function Home() {
   return (
-    <div className="w-screen h-screen sm:ml-[20%] flex flex-col justify-center items-center bg-gray-950">
+    <div className="w-screen h-screen sm:ml-[20%] relative flex flex-col justify-center items-center bg-gray-950">
       <CustomImage
         image="/images/person.webp"
         alt="person"
