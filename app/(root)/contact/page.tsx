@@ -91,10 +91,10 @@ export default function Contact() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3, delay: 0.3 }}
-        className="grid sm:grid-cols-2 md:grid-cols-2 2xl:grid-cols-4 gap-8"
+        className="grid sm:grid-cols-2 md:grid-cols-2 gap-8"
       >
         {contactData.map((contact) => (
-          <li key={contact.type} className="2xl:m-auto xl:flex gap-2">
+          <li key={contact.type} className="w-full 2xl:m-auto xl:flex justify-start gap-2">
             <span className="flex gap-2 capitalize text-slate-400">
               {iconMap[contact.icon]} {contact.type}:
             </span>

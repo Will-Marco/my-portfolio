@@ -22,7 +22,7 @@ const FireSpark = () => {
     />
   ));
 
-  return <>{sparks}</>;
+  return <div className="w-screen h-screen absolute -left-10 sm:left-0">{sparks}</div>;
 };
 
 export default FireSpark;
