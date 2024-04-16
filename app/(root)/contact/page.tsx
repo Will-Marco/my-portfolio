@@ -78,7 +78,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="w-screen h-screen sm:ml-[20%] p-6 pt-9 sm:p-10 sm:px-20 md:px-28 relative bg-gray-950">
+    <div className="w-screen sm:ml-[20%] p-6 pt-9 sm:p-10 sm:px-20 md:px-28 relative bg-gray-950">
       <motion.h1
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

@@ -21,24 +21,19 @@ export default function Navbar(): ReactNode {
       <DrawerTrigger className="absolute top-0 left-0  z-10">
         <Menu />
       </DrawerTrigger>
-      <DrawerContent className="h-screen p-4 flex flex-col justify-between text-center ">
+      <DrawerContent className="h-2/3 p-4 flex flex-col justify-between text-center ">
         <DrawerHeader className="flex justify-between items-start">
           <DrawerTitle className="mb-4 text-3xl font-semibold">
             <Link href="/">
               Marco<span className="text-gray-500">.dev</span>
             </Link>
           </DrawerTitle>
-          <DrawerClose>
-            <Button variant="ghost">
-              <X />
-            </Button>
-          </DrawerClose>
         </DrawerHeader>
         <DrawerClose>
           <NavbarItems />
         </DrawerClose>
         <DrawerFooter>
-          <p className="text-sm">
+          <p className="text-xs">
             Copyright © 2024 All rights reserved
             <br />
             Created by Marco.dev
@@ -61,7 +56,7 @@ export default function Navbar(): ReactNode {
           </Link>
           <NavbarItems />
         </div>
-        <p className="text-sm md:text-sm lg:text-base">
+        <p className="text-sm lg:text-base">
           Copyright © 2024 All rights reserved
           <br />
           Created by Marco.dev
