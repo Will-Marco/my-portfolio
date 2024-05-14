@@ -29,7 +29,7 @@ export const navItems: NavItemsType[] = [
   },
   {
     route: "/files/FirdavsAbdiazizovResume.pdf",
-    label: "CV",
+    label: "Resume",
     icon: "cv",
   },
 ];
@@ -39,12 +39,7 @@ export const socialMedias: SocialMediasType[] = [
     route: "https://www.linkedin.com/in/firdavs-abdiazizov",
     label: "LinkedIn",
     icon: "linkedin",
-  },
-  {
-    route: "https://instagram.com/firdavs_abdiazizov",
-    label: "Instagram",
-    icon: "instagram",
-  },
+  }
 ];
 
 export const cards: CardsType[] = [
